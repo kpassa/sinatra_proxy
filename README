@@ -1,0 +1,26 @@
+Proxy en Ruby
+-------------
+
+Un ejemplo usando Sinatra, Thin, y EventMachine con SSE (streaming)
+
+Basado en esto: http://html5hacks.com/blog/2013/04/21/push-notifications-to-the-browser-with-server-sent-events/
+
+Instalar:
+
+    bundle install
+
+    # ejemplo de polling:
+    ruby polling.rb
+
+    # ejemplo de sockets:
+    ruby streaming.rb
+
+
+Esta configurado para correr contra un api corriendo en localhost:3000.
+Cambiar `URL` en account.rb para api.staging o lo que sea.
+
+Probar con CURL:
+
+    curl localhost:4567/accounts -d number=127 
+
+Ahorita no tiene nada mas que crear accounts.
